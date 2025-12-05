@@ -34,10 +34,15 @@ function App() {
     setTasks(tasks.map((t) => (t.id === id ? res.data : t)));
   };
 
-  const deleteTask = async (id) => {
-    await axios.delete(`https://taskmanager-i1of.onrender.com/api/tasks${id}`);
+ const deleteTask = async (id) => {
+  try {
+    await axios.delete(`https://taskmanager-i1of.onrender.com/api/tasks/${id}`);
     setTasks(tasks.filter((t) => t.id !== id));
-  };
+  } catch (error) {
+    console.error("Delete failed:", error);
+  }
+};
+
 
   return (
     <div className="App">
