@@ -5,7 +5,7 @@ import com.example.taskmanager.service.TaskService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://task-manager-frontend-hkb8-5rlqj2zu6-lokesh-55s-projects.vercel.app")
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
