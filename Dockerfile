@@ -6,13 +6,13 @@ WORKDIR /app
 COPY backend/pom.xml .
 
 # Download dependencies
-RUN ./mvnw -B -q -DskipTests dependency:go-offline
+RUN mvn -B -q -DskipTests dependency:go-offline
 
 # Copy source code from backend/src folder
 COPY backend/src ./src
 
 # Build the project
-RUN ./mvnw -B -q -DskipTests package
+RUN mvn -B -q -DskipTests package
 
 # ---------- Run stage ----------
 FROM eclipse-temurin:17-jre
