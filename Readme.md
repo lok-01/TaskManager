@@ -2,8 +2,12 @@ Project : Task Management Application
 
 This is a full-stack Task Management Application built as part of the SuPrazo Technologies Jr. Software Developer Intern Technical Assessment.
 
-The app allows users to:
+Hosted Links:
 
+Frontend (React + Vercel) → https://task-manager-frontend-hkb8.vercel.app/
+Backend (Spring Boot + Render) → https://taskmanager-i1of.onrender.com/api/tasks
+
+The app allows users to:
 ->Add new tasks
 ->View all tasks
 ->Update task status (In Progress / Completed)
@@ -24,10 +28,12 @@ Tools & Technologies:
 ->Spring Data JPA
 ->MySQL Driver
 
+
+
 How to Run/View the Project :
 
 1. Clone or Download the Project
-git clone https://github.com/yourusername/task-management.git
+git clone https://github.com/lok-01/TaskManager.git
 
 (or just unzip the downloaded folder)
 
@@ -45,6 +51,47 @@ spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+
+
+
+3.Change Backend API URLs (For Local Setup)
+
+By default, the frontend is connected to the hosted backend on Render.
+If you want to run everything locally, change the backend API URLs inside these files:
+
+📁 frontend/src/App.js
+Replace:
+
+https://taskmanager-i1of.onrender.com/api/tasks
+
+
+with:
+
+http://localhost:8080/api/tasks
+
+
+Example:
+
+// Before (hosted)
+axios.post("https://taskmanager-i1of.onrender.com/api/tasks", task);
+
+// After (local)
+axios.post("http://localhost:8080/api/tasks", task);
+
+
+🔧 Update Backend CORS Settings 
+
+If you are switching between hosted and local setups,
+update the CORS configuration in:
+
+📁 backend/src/main/java/com/example/taskmanager/controller/TaskController.java
+
+For hosted frontend:
+@CrossOrigin(origins = "https://task-manager-frontend-hkb8.vercel.app/")
+
+For local frontend:
+@CrossOrigin(origins = "http://localhost:3000")
+
 
 3. Run the Backend
 
