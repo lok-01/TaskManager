@@ -3,8 +3,8 @@ Project : Task Management Application
 This is a full-stack Task Management Application.
 
 Hosted Links:
-
 Frontend (React + Vercel) → https://task-manager-frontend-hkb8.vercel.app/
+
 Backend (Spring Boot + Render) → https://taskmanager-i1of.onrender.com/api/tasks
 
 The app allows users to:
