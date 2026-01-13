@@ -1,6 +1,6 @@
 Project : Task Management Application
 
-This is a full-stack Task Management Application built as part of the SuPrazo Technologies Jr. Software Developer Intern Technical Assessment.
+This is a full-stack Task Management Application.
 
 Hosted Links:
 
@@ -131,21 +131,5 @@ Frontend runs at:
 
 Folder Structure :
 
-TaskManager/
-├── backend/
-│   ├── src/main/java/com/example/taskmanager/
-│   │   ├── controller/TaskController.java
-│   │   ├── model/Task.java
-│   │   ├── repository/TaskRepository.java
-│   │   ├── service/TaskService.java
-│   │   └── TaskManagerApplication.java
-│   └── src/main/resources/application.properties
-│
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── TaskForm.js
-    │   │   └── TaskList.js
-    │   ├── App.js
-    │   ├── App.css
-    │   └── index.js
+<img width="517" height="486" alt="image" src="https://github.com/user-attachments/assets/4037de2e-2d00-4d20-9b33-c7424ec24fc8" />
+
